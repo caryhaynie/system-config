@@ -9,6 +9,7 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 
+
 " map F2 to new tab. F3 to close tab, and F4 to move tab
 :map <F2> <Esc>:tabnew<CR>
 :imap <F2> <Esc>:tabnew<CR>
@@ -17,8 +18,31 @@ set expandtab
 :map <F4> <Esc>:tabmove<CR>
 :imap <F4> <Esc>:tabmove<CR>
 
-
-"colorscheme desert
-
+" turn on helpful syntax highlighting
 syntax on
 filetype indent plugin on
+
+" waf wscript files are really python files, so treat them as such.
+autocmd BufNewFile,BufRead wscript set filetype=python
+
+" vala file support.
+autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
+autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
+au BufRead,BufNewFile *.vala            setfiletype vala
+au BufRead,BufNewFile *.vapi            setfiletype vala
+
+" Disable valadoc syntax highlight
+"let vala_ignore_valadoc = 1
+
+" Enable comment strings
+let vala_comment_strings = 1
+
+" Highlight space errors
+let vala_space_errors = 1
+" Disable trailing space errors
+"let vala_no_trail_space_error = 1
+" Disable space-tab-space errors
+let vala_no_tab_space_error = 1
+
+" Minimum lines used for comment syncing (default 50)
+"let vala_minlines = 120
