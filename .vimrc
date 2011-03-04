@@ -18,7 +18,7 @@ set expandtab
 :imap <F4> <Esc>:tabmove<CR>
 
 
-colorscheme desert
+"colorscheme desert
 
 syntax on
 filetype indent plugin on
