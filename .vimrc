@@ -9,6 +9,8 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 
+set smartindent
+
 
 " map F2 to new tab. F3 to close tab, and F4 to move tab
 :map <F2> <Esc>:tabnew<CR>
