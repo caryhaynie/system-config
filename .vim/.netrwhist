@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/usr/include/GL'
-let g:netrw_dirhist_2='/usr/include'
-let g:netrw_dirhist_3='/usr/share/byobu/keybindings'
